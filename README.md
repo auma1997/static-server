@@ -13,4 +13,8 @@ A minimal Node.js + Express static HTML server, containerized with Docker.
 ### Local  
 ```bash
 npm install
+<<<<<<< HEAD
 npm start
+=======
+npm start
+>>>>>>> 9448490 (Add kubernetes manifests in k8s/ folder)
