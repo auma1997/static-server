@@ -1,14 +1,7 @@
-const express = require('express');
-const path    = require('path');
-
-const app  = express();
-const PORT = process.env.PORT || 8080;
-
-// Serve static files
-const publicPath = path.join(__dirname, 'public');
-app.use(express.static(publicPath));
+// Instead of serving 'public'
+app.use(express.static(__dirname));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Create the HTTP server
