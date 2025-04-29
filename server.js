@@ -1,4 +1,7 @@
 // Instead of serving 'public'
+const path = require('path');
+const indexPath = path.join(__dirname, 'public', 'index.html');
+console.log('🔍 Serving from:', indexPath)
 app.use(express.static(__dirname));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
