@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: static-server
+  name: static-server-service      # ← must be non-empty
 spec:
-  type: LoadBalancer
   selector:
     app: static-server
   ports:
-  - port: 80
-    targetPort: 8080
+    - port: 80
+      targetPort: 8080
+  type: LoadBalancer
